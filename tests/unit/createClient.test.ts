@@ -6,6 +6,7 @@ import {
   createClient,
   Version2Client,
   Version3Client,
+  VersionServerClient
 } from '@jirajs';
 
 const defaultConfig = { host: 'http://localhost' };
@@ -36,6 +37,13 @@ test('should create ServiceDesk client', ({ expect }) => {
 
   expect(!!client).toBeTruthy();
   expect(client instanceof Version2Client).toBeTruthy();
+});
+
+test('should create Server client', ({ expect }) => {
+  const client = createClient(ClientType.Server, defaultConfig);
+
+  expect(!!client).toBeTruthy();
+  expect(client instanceof VersionServerClient).toBeTruthy();
 });
 
 test('should create Base client', ({ expect }) => {

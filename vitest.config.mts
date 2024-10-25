@@ -4,6 +4,16 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   test: {
+    poolOptions: {
+      threads: {
+        minThreads: 1,
+        maxThreads: 10
+      },
+      forks: {
+        minForks: 1,
+        maxForks: 10,
+      }
+    },
     typecheck: {
       enabled: true,
       tsconfig: 'tsconfig.lint.json',

@@ -12,6 +12,9 @@ import {
   Version3Client,
   Version3Models,
   Version3Parameters,
+  VersionServerClient,
+  VersionServerParameters,
+  VersionServerModels,
   type Callback,
   type Config,
 } from '@jirajs';
@@ -78,4 +81,16 @@ test('ServiceDesk models should be defined', ({ expect }) => {
 
 test('ServiceDesk parameters should be defined', ({ expect }) => {
   expect(!!ServiceDeskParameters).toBeTruthy();
+});
+
+test('VersionServer client should be defined', ({ expect }) => {
+  expect(!!VersionServerClient).toBeTruthy();
+});
+
+test('VersionServer models should be defined', ({ expect }) => {
+  expect(!!VersionServerModels).toBeTruthy();
+});
+
+test('VersionServer parameters should be defined', ({ expect }) => {
+  expect(!!VersionServerParameters).toBeTruthy();
 });

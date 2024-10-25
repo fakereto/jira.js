@@ -9,4 +9,5 @@ export * from './requestConfig';
 export * as Agile from './agile';
 export * as Version2 from './version2';
 export * as Version3 from './version3';
+export * as VersionServer from './server';
 export * as ServiceDesk from './serviceDesk';
